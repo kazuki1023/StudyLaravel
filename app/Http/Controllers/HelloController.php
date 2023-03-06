@@ -13,7 +13,7 @@ class HelloController extends Controller
     public function index(Request $request)
     {
         $date = [
-            'msg' => 'コントローラー→テンプレートに渡される情報',
+            'msg' => 'bladeを利用したサンプルです。',
             'id' => $request->id,
             'name' => "kazuki"
         ];
