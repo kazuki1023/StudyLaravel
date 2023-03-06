@@ -18,21 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// 任意パラメーター
-Route::get('hello/{msg?}', function ($msg = 'no message.'){
-    $html = <<<EOF
-<html>
-<head>
-<title>Hello</title>
-</head>
-<body>
-    <h1>Hello</h1>
-    <span>hello/</span>
-    <span>{$msg}にかいた内容がもってこられるよ</span>
-    <p>This is {$msg} page.</p>
-</body>
-</html>
-EOF;
-    return $html;
-});
-
+// アクションにルートを割り当てる。
+Route::get('hello', 'HelloController@index');
