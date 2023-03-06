@@ -19,7 +19,10 @@
 1. 全部書く
 - Route::get('hello', 'App\Http\Controllers\HelloController@index');
 
-2. useでコントローラーをインポート
+2. useでコントローラーをwen.phpにインポート
 - web.php参照
 
 [参考サイト](tairaengineer-note.com/laravel-error-target-class-does-not-exist/)
+
+### アクションとアドレスの関係
+- ex) http://アプリケーションのアドレス/コントローラー/アクション
