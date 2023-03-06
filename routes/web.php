@@ -13,13 +13,7 @@ use App\Http\Controllers\HelloController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-// get関数の第１引数のアドレス部分に{パラメータ}を用意する。
-Route::get('/', function () {
-    return view('welcome');
+// ルート情報の設定のところで、直接テンプレートを使う。
+Route::get('hello', function () {
+    return view("hello.index");
 });
-
-// アクションにルートを割り当てる。
-// これはlaravel8以降の変更点だから本と違う。
-// シングルアクションコントローラーの場合、メゾットの指定要らない。
-Route::get('hello', [HelloController::class, "index"]);
