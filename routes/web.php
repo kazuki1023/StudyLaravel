@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// 必須パラメーター
-Route::get('hello/{msg}', function ($msg){
+// 任意パラメーター
+Route::get('hello/{msg?}', function ($msg = 'no message.'){
     $html = <<<EOF
 <html>
 <head>
