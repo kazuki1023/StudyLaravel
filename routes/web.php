@@ -21,4 +21,4 @@ Route::get('/', function () {
 
 // アクションにルートを割り当てる。
 // これはlaravel8以降の変更点だから本と違う。
-Route::get('hello', [HelloController::class, 'index']);
+Route::get('hello/{id?}/{pass?}', [HelloController::class, 'index']);
