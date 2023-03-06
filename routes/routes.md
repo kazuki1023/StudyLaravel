@@ -13,3 +13,13 @@
 - get関数の第二引数にreturnでHTMLのソースコードを直接返す。
 - ヒアドキュメント
 - - <<<演算子を使って、リスト内に直接記入されたテキストをまとめて変数に代入するもの。
+
+### アクションにルートを割り当てるやり方
+（ **本のだとできない** ）
+1. 全部書く
+- Route::get('hello', 'App\Http\Controllers\HelloController@index');
+
+2. useでコントローラーをインポート
+- web.php参照
+
+[参考サイト](tairaengineer-note.com/laravel-error-target-class-does-not-exist/)

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HelloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,5 @@ Route::get('/', function () {
 });
 
 // アクションにルートを割り当てる。
-Route::get('hello', 'HelloController@index');
+// これはlaravel8以降の変更点だから本と違う。
+Route::get('hello', [HelloController::class, 'index']);

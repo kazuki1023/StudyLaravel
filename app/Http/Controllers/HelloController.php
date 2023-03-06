@@ -10,7 +10,7 @@ class HelloController extends Controller
         return <<<EOF
         <html>
         <head>
-        <title>hello?index</title>
+        <title>hello/index</title>
         </head>
         <body>
             <h1>Index</h1>
