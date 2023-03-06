@@ -14,4 +14,4 @@ use App\Http\Controllers\HelloController;
 |
 */
 // ルート情報の設定のところで、直接テンプレートを使う。
-Route::get('hello/{id?}', [HelloController::class, "index"]);
+Route::get('hello', [HelloController::class, "index"]);
