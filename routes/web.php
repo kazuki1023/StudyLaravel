@@ -13,22 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// get関数の第１引数のアドレス部分に{パラメータ}を用意する。
 Route::get('/', function () {
     return view('welcome');
 });
-$html = <<<EOF
+
+// 必須パラメーター
+Route::get('hello/{msg}', function ($msg){
+    $html = <<<EOF
 <html>
 <head>
 <title>Hello</title>
 </head>
 <body>
     <h1>Hello</h1>
-    <p>This is sample page.</p>
+    <span>hello/</span>
+    <span>{$msg}にかいた内容がもってこられるよ</span>
+    <p>This is {$msg} page.</p>
 </body>
 </html>
 EOF;
-
-Route::get('hello', function () use ($html){
     return $html;
 });
 
