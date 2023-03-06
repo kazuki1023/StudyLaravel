@@ -16,21 +16,19 @@ function tag($tag, $txt) {
 }
 class HelloController extends Controller
 {
-    public function index() {
-        global $head, $body, $end;
-        $html = $head . tag('title', 'Hello/Index'). $body
-        . tag('h1', 'Index') . tag("p", 'this is Index Page'). '<a href="/hello/other">
-        go to the other page</a>' .
-        $end;
-        return $html;
+    public function __invoke()
+    {
+        return <<<EOF
+        <html>
+        <head>
+        <title>Hello</title>
+        </head>
+        <body>
+            <h1>Hello</h1>
+            <p>シングルアクションコントローラー</p>
+        </body>
+        </html>
+        EOF;
     }
 
-    public function other() {
-        global $head, $body, $end;
-        $html = $head . tag('title', 'Hello/Index'). $body
-        . tag('h1', 'Other') . tag("p", 'this is Other Page'). '<a href="/hello">
-        go to the hello page</a>' .
-        $end;
-        return $html;
-    }
 }

@@ -21,5 +21,5 @@ Route::get('/', function () {
 
 // アクションにルートを割り当てる。
 // これはlaravel8以降の変更点だから本と違う。
-Route::get('hello', [HelloController::class, 'index']);
-Route::get('hello/other', [HelloController::class, 'other']);
+// シングルアクションコントローラーの場合、メゾットの指定要らない。
+Route::get('hello', HelloController::class);
