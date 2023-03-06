@@ -1,11 +1,14 @@
 ## memo
 
 ### MVCモデルについて
-- 参考サイト一覧
-[#6 Laravelの仕組み〜MVCの理解〜](https://cbc-study.com/training/backend/laravel3)
-[Laravelの構造と処理の流れを【MVCモデル】で初心者向けに解説【model,view,controller】](https://hikopro.com/laravel-mvc/)
-
 ![MVCモデル](https://cbc-study.com/files/images/performance/laravel/12.gif)
+
+- 参考サイト一覧
+- [#6 Laravelの仕組み〜MVCの理解〜](https://cbc-study.com/training/backend/laravel3)
+
+- [Laravelの構造と処理の流れを【MVCモデル】で初心者向けに解説【model,view,controller】](https://hikopro.com/laravel-mvc/)
+
+
 ### アクション
 - コントローラーに用意される処理のこと。
 - メゾットの形で用意される。
