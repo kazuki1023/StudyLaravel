@@ -21,8 +21,13 @@
 
 2. useでコントローラーをwen.phpにインポート
 - web.php参照
+- - use App\Http\Controllers\HelloController;
+- - Route::get('hello', [HelloController::class, "index"]);
 
 [参考サイト](tairaengineer-note.com/laravel-error-target-class-does-not-exist/)
 
 ### アクションとアドレスの関係
 - ex) http://アプリケーションのアドレス/コントローラー/アクション
+
+### request responseで返ってくるもの
+![参考画像](../public/img/Screen%20Shot%202023-03-06%20at%2021.18.58.png)
