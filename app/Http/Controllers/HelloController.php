@@ -20,4 +20,12 @@ class HelloController extends Controller
         return view("hello.index", $date);
     }
 
+    public function post(Request $request) {
+        // postでname="msg"で指定したものがとってこれる。
+        $msg = $request->msg;
+        $date = [
+            'msg' => 'Postしてきたもの' . $msg . "さん"
+        ];
+        return view("hello.index", $date);
+    }
 }
