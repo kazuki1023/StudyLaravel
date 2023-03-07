@@ -4,12 +4,11 @@
   </head>
   <body>
     <h1>blade/index</h1>
-    <p>{{$msg}}</p>
-    @if ($msg != '')
+    @isset ($msg)
     <p>こんにちは、{{$msg}}さん</p>
     @else
-    <p>名前教えて</p>
-    @endif
+    <p>なにはちょーだい</p>
+    @endisset
     <form action="/hello" method="POST">
       @csrf
       <input type="text" name="msg">
