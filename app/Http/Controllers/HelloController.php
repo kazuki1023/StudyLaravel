@@ -13,11 +13,19 @@ class HelloController extends Controller
     public function index(Request $request)
     {
         $date = [
-            'msg' => 'コントローラー→テンプレートに渡される情報',
+            'msg' => 'bladeを利用したサンプルです。',
             'id' => $request->id,
             'name' => "kazuki"
         ];
         return view("hello.index", $date);
     }
 
+    public function post(Request $request) {
+        // postでname="msg"で指定したものがとってこれる。
+        $msg = $request->msg;
+        $date = [
+            'msg' => 'Postしてきたもの' . $msg . "さん"
+        ];
+        return view("hello.index", $date);
+    }
 }
