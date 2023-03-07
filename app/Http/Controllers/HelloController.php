@@ -10,22 +10,15 @@ use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         $date = [
-            'msg' => 'bladeを利用したサンプルです。',
-            'id' => $request->id,
-            'name' => "kazuki"
+            'msg' => '',
         ];
         return view("hello.index", $date);
     }
 
     public function post(Request $request) {
-        // postでname="msg"で指定したものがとってこれる。
-        $msg = $request->msg;
-        $date = [
-            'msg' => 'Postしてきたもの' . $msg . "さん"
-        ];
-        return view("hello.index", $date);
+        return view("hello.index", ['msg' => $request->msg]);
     }
 }
