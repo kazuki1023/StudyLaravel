@@ -4,11 +4,17 @@
   </head>
   <body>
     <h1>blade/index</h1>
-    <p>{{$msg}}</p>
-    <form action="/hello" method="POST">
-      @csrf
-      <input type="text" name="msg">
-      <input type="submit">
-    </form>
+    <p>foreachディレクティブの例</p>
+    <ol>
+      @php
+      $counter = 0;
+      @endphp
+      @while ($counter < count($data))
+      <li>{{$data[$counter]}}</li>
+      @php
+      $counter++;
+      @endphp
+      @endwhile
+    </ol>
   </body>
 </html>
