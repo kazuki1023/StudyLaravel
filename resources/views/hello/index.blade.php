@@ -6,9 +6,15 @@
     <h1>blade/index</h1>
     <p>foreachディレクティブの例</p>
     <ol>
-      @foreach($date as $item)
-      <li>{{$item}}</li>
-      @endforeach
+      @php
+      $counter = 0;
+      @endphp
+      @while ($counter < count($data))
+      <li>{{$data[$counter]}}</li>
+      @php
+      $counter++;
+      @endphp
+      @endwhile
     </ol>
   </body>
 </html>

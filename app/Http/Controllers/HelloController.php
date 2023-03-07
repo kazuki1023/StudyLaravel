@@ -12,8 +12,8 @@ class HelloController extends Controller
 {
     public function index()
     {
-        $date = ["one", "two", "さん", "よん"];
-        return view("hello.index", ["date"=> $date]);
+        $data = ["one", "two", "さん", "よん"];
+        return view("hello.index", ["data"=> $data]);
     }
 
     // public function post(Request $request) {
