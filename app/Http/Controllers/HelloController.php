@@ -12,10 +12,11 @@ class HelloController extends Controller
 {
     public function index()
     {
-        return view("hello.index");
+        $date = ["one", "two", "さん", "よん"];
+        return view("hello.index", ["date"=> $date]);
     }
 
-    public function post(Request $request) {
-        return view("hello.index", ['msg' => $request->msg]);
-    }
+    // public function post(Request $request) {
+    //     return view("hello.index", ['msg' => $request->msg]);
+    // }
 }
