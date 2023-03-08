@@ -15,7 +15,6 @@ use App\Http\Middleware\HelloMiddleware;
 |
 */
 // ルート情報の設定のところで、直接テンプレートを使う。
-Route::get('hello',  'App\Http\Controllers\HelloController@index' )-> middleware(HelloMiddleware::class);
 Route::get('hello', [HelloController::class, "index"]);
 Route::post('hello', [HelloController::class, "post"]);
 
