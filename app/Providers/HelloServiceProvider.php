@@ -21,9 +21,7 @@ class HelloServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer(
-            'hello.index', function($view) {
-                $view -> with('view_message', 'composer message!');
-            }
+            'hello.index', 'App\Http\Composers\HelloComposer'
         );
     }
 }
