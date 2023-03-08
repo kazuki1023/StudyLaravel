@@ -21,8 +21,8 @@
 
 2. useでコントローラーをwen.phpにインポート
 - web.php参照
-- - use App\Http\Controllers\HelloController;
-- - Route::get('hello', [HelloController::class, "index"]);
+  - use App\Http\Controllers\HelloController;
+  - Route::get('hello', [HelloController::class, "index"]);
 
 [参考サイト](tairaengineer-note.com/laravel-error-target-class-does-not-exist/)
 
