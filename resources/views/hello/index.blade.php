@@ -9,15 +9,7 @@
 @section('content')
   <p>ここが本文</p>
   <p>必要なだけ記述できる。</p>
-    @component('components.message')
-      @slot('msg_title')
-      Caution!
-      @endslot
-
-      @slot('msg_content')
-      メッセージの表示
-      @endslot
-    @endcomponent
+  @include('components.message', ['msg_title'=>'ok', 'msg_content' =>'サブビューです'])
 @endsection
 
 @section('footer')
