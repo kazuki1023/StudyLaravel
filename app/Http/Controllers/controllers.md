@@ -29,4 +29,28 @@
 - view関数の第二引数に配列が渡される。
 - 配列なので、いくつでも渡せる。
 
+### バリデーションの基本処理
+- '設定するフォームの項目名' => 'ルールの指定'
+```console
+$validate_rule = [
+            'name' => 'required',
+            'mail' => 'email',
+            'age' => 'numeric|between:0,150'
+        ];
+```
+- name
+  - nameという項目にrequiredというルールを設定。
+```console
+'name' => 'required',
+```
+- age
+  - numeric(数値である)かつbetween:0,150で0~150の間の数字って指定する。
+```console
+'mail' => 'email',
+```
+
+### バリデーションのルール詳細
+- 網羅的に書いてあるので、辞書として使えそう
+[バリデーションルールのまとめ](https://www.wakuwakubank.com/posts/376-laravel-validation/)
+[Laravelのバリデーションで指定できる内容をざっくりまとめ直しました。](https://qiita.com/fagai/items/9904409d3703ef6f79a2)
 
