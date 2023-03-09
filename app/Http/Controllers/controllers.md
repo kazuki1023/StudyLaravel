@@ -49,3 +49,8 @@ $validate_rule = [
 'mail' => 'email',
 ```
 
+### バリデーションのルール詳細
+- 網羅的に書いてあるので、辞書として使えそう
+[バリデーションルールのまとめ](https://www.wakuwakubank.com/posts/376-laravel-validation/)
+[Laravelのバリデーションで指定できる内容をざっくりまとめ直しました。](https://qiita.com/fagai/items/9904409d3703ef6f79a2)
+
