@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Http\Validators\HelloValidator;
+
+use Illuminate\Validation\Validator;
 use Illuminate\Support\facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,8 +23,8 @@ class HelloServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer(
-            'hello.index', 'App\Http\Composers\HelloComposer'
-        );
+        // Validator::extend('hello', function ($attribute, $value, $parameters, $validator) {
+        //     return $value % 2 === 0;
+        // });
     }
 }
