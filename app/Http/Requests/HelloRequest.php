@@ -32,6 +32,7 @@ class HelloRequest extends FormRequest
         ];
     }
 
+    // メッセージを日本語に変更
     public function messages(): array
     {
         return [

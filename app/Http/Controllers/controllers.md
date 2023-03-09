@@ -54,3 +54,47 @@ $validate_rule = [
 [バリデーションルールのまとめ](https://www.wakuwakubank.com/posts/376-laravel-validation/)
 [Laravelのバリデーションで指定できる内容をざっくりまとめ直しました。](https://qiita.com/fagai/items/9904409d3703ef6f79a2)
 
+
+### バリデータ
+- Requestインスタンスと検証ルールの引数を渡すことで自動的にフォームの値をチェック
+- 問題があれば、getのページにリダイレクトして、フォームの再表示を行う。
+
+- しかし下の時使えない。
+  - エラーの時、リダイレクトせず、別の処理をしたい、
+  - フォーム以外で使いたい。
+
+- この時使えるのが、バリデータ
+### バリデータ
+- validatorクラスをインスタンス化して使用。
+- validateメソッドを呼びdさず、このvalidatorクラスのインスタンスを作成、しょりでバリデーションの処理をカスタマイズできる。
+- 参考サイト
+[Laravel 9.x バリデーション](https://readouble.com/laravel/9.x/ja/validation.html)
+
+- 使い方
+  - Validatorインスタンスをmakeというメソッドを使って作成する必要あり。
+  - 第一引数はチェックする値をまとめた配列
+  - 第二引数が使用する検証ルールの情報をまとめたものが指定。
+```console
+Validator::make($request->all(), [
+            'name' => 'required',
+            'mail' => 'email',
+            'age' => 'numeric|between:0,150',
+        ]);
+```
+- あとはエラーが起きたときの処理
+``` console
+        if ($validator ->fails()) {
+            エラー時の処理
+        }
+```
+
+- エラーが発生したときのリダイレクト
+``` console
+    <!-- 指定のアドレスにリダイレクト  -->
+    return redirect('/hello')
+    <!-- エラーメッセージの表示。引数にValidatorインスタンスを入れることでエラーメッセージをリダイレクト先に渡す -->
+    ->withErrors($validator)
+    <!-- 送信されたフォームの値をそのまま引き継ぐ -->
+    ->withInput(); 
+
+```
