@@ -74,6 +74,7 @@ $validate_rule = [
   - Validatorインスタンスをmakeというメソッドを使って作成する必要あり。
   - 第一引数はチェックする値をまとめた配列
   - 第二引数が使用する検証ルールの情報をまとめたものが指定。
+  - 第３引数はエラーメッセージの配列を指定。
 ```console
 Validator::make($request->all(), [
             'name' => 'required',
