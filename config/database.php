@@ -1,3 +1,4 @@
+<!-- laravelで仕様すrデータベースの情報がまとまってる。 -->
 <?php
 
 use Illuminate\Support\Str;
