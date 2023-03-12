@@ -16,3 +16,6 @@
 
 ### DB::updateの利用
 - DB::update(クエリ文、パラメーター配列);
+
+Undefined array key 0
+というエラー出るけど、一応5-2終了
