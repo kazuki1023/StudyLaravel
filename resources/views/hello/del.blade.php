@@ -14,15 +14,15 @@
       <input type="hidden" name="id" value="{{$form->id}}">
       <tr>
         <th>name:</th>
-        <td><input>{{$form->name}}</td>
+        <td><input value="{{$form->name}}"></td>
       </tr>
       <tr>
         <th>mail:</th>
-        <td><input>{{$form->mail}}</td>
+        <td><input value="{{$form->mail}}"></td>
       </tr>
       <tr>
         <th>age:</th>
-        <td><input>{{$form->age}}</td>
+        <td><input value="{{$form->age}}"></td>
       </tr>
       <tr>
         <th></th>
