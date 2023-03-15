@@ -9,18 +9,16 @@
 @section('content')
 <table>
   <tr>
-    <th>name</th>
-    <th>mail</th>
-    <th>age</th>
+    <th>Data</th>
   </tr>
   @foreach ($items as $item) 
     <tr>
-      <td>{{$item ->name}}</td>
-      <td>{{$item ->mail}}</td>
-      <td>{{$item ->age}}</td>
+      <td>{{$item -> getData()}}</td>
     </tr>
   @endforeach
 </table>
 @endsection
 
 @section('footer')
+copyright
+@endsection
