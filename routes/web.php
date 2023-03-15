@@ -34,3 +34,6 @@ Route::get('hello/show', [HelloController::class, "show"]);
 
 
 Route::get('person', [PersonController::class, "index"]);
+
+Route::get('person/find', [PersonController::class, "find"]);
+Route::post('person/find', [PersonController::class, "search"]);
