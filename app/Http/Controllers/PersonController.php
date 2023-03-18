@@ -14,12 +14,18 @@ class PersonController extends Controller
 
     // getアクセスしたときの処理
     public function find(Request $request) {
-        return view('person.index', ['input' => '']);
+        return view('person.find', ['input' => '']);
     }
 
     // post送信されたときの処理
     public function search(Request $request) {
-        $item = Person::find($request -> input);
+        $min = $request ->input * 1;
+        $max = $min + 10;
+        $item =
+        Person::
+        ageGreaterThan($min)
+        ->ageLessThan($max)
+        ->first();
         $param = ['input' => $request->input, 'item' => $item];
         return view('person.find', $param);
     }
